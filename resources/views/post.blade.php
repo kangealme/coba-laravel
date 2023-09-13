@@ -2,10 +2,12 @@
 
 @section('container')
     <article>
-        <h2>Judul</h2>
-        <h5>Author</h5>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae illum soluta nihil ipsam, laudantium quisquam numquam eveniet earum, dicta molestiae necessitatibus beatae iusto commodi modi! Magnam ullam consectetur nam deserunt?</p>
+        <h2>{{ $post->title }}</h2>
+        <p>By. Kangealme in <a href="/category/{{ $post->category->slug }}">{{ $post->category->name }}</a></p>
+        {!! $post->body !!}
     </article>
 
-    <a href="/blog">Back to Posts</a>
+    <a href="/posts">Back to Posts</a>
 @endsection
+
+
