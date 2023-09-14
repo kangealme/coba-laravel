@@ -16,9 +16,15 @@ class Post extends Model
     // ];
 
     protected $guarded = ['id'];
+    protected $with = ['category', 'user'];
 
     public function category()
     {
-        return $this->belongsTo(Category::class); 
+        return $this->belongsTo(Category::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }

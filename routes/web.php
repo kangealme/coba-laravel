@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
@@ -32,3 +33,4 @@ Route::get('/about', function () {
 Route::get('/posts', [PostController::class,'index']);
 Route::get('/post/{post:slug}', [PostController::class, 'post']);
 Route::get('/category/{category:slug}', [CategoryController::class, 'category']);
+Route::get('/author/{user:username}',[AuthorController::class, 'author']);
